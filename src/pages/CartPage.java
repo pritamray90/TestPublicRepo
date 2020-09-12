@@ -14,6 +14,5 @@ public class CartPage extends BasePage{
 		//Add locators for CartPage
 		
 		return new SubmitPage(driver);
-		//return PageFactory.initElements(driver, HomePage.class);
 	}
 }

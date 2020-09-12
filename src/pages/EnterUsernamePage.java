@@ -31,9 +31,6 @@ public class EnterUsernamePage extends BasePage{
 		nextButton.click();
 		
 		return new CartPage(driver);
-		
-		// remain on EnterUsernamePage
-		// reach the EnterPasswordPage
 	}
 	
 	

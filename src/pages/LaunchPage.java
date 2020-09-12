@@ -13,6 +13,5 @@ public class LaunchPage extends BasePage{
 		
 		driver.get("http://www.amazon.com");
 		return new HomePage(driver);
-		//return PageFactory.initElements(driver, HomePage.class);
 	}
 }
