@@ -10,9 +10,8 @@ public class BasePage {
 		System.out.println("Base Page Constructor");
 	}
 	
-	// page is init
 	public BasePage(WebDriver driver) {
-		// screenshot
+
 		this.driver = driver;
 		PageFactory.initElements(driver, this);
 	}
@@ -21,9 +20,5 @@ public class BasePage {
 	public void validateTitle(String expectedTitle) {
 		Assert.assertEquals(driver.getTitle(), expectedTitle);
 	}
-	
-	// 1000s of validations
-	// validations - validateTitle,validateElementPresence, validateText
-	// applicatons - validateSession
-	// reporting, screenshots
+
 }

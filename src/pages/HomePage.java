@@ -17,7 +17,7 @@ public class HomePage extends BasePage{
 	
 	
 	public EnterUsernamePage gotoLoginPage() {
-		loginLink.click();
+		loginLink.click();//Add Cart and go to next page
 		return new EnterUsernamePage(driver);
 		//return PageFactory.initElements(driver, EnterUsernamePage.class);
 	}

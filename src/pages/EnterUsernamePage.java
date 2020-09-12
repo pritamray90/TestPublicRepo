@@ -11,6 +11,9 @@ public class EnterUsernamePage extends BasePage{
 	@FindBy(id=Constants.LOGIN_ID)
 	WebElement loginUsername;
 	
+	@FindBy(id=Constants.PWD)
+	WebElement loginPassword;
+	
 	@FindBy(css=Constants.NEXT_BUTTON)
 	WebElement nextButton;
 	
@@ -18,12 +21,16 @@ public class EnterUsernamePage extends BasePage{
 		super(driver);
 	}
 	
-	public void submitUsername(String userid) {
+	public CartPage submitUsername(String userid,String password) {
 		
 		//validate
 		loginUsername.sendKeys(userid);
 		// explicit wait
+		loginPassword.sendKeys(password);
+		
 		nextButton.click();
+		
+		return new CartPage(driver);
 		
 		// remain on EnterUsernamePage
 		// reach the EnterPasswordPage

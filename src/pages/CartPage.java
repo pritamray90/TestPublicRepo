@@ -3,16 +3,17 @@ package pages;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.PageFactory;
 
-public class LaunchPage extends BasePage{
+public class CartPage extends BasePage{
 	
-	public LaunchPage(WebDriver driver) {
+	public CartPage(WebDriver driver) {
 		super(driver);
 	}
 	
-	public HomePage navigateToHomePage() {
+	public SubmitPage CartPage() {
 		
-		driver.get("http://www.amazon.com");
-		return new HomePage(driver);
+		//Add locators for CartPage
+		
+		return new SubmitPage(driver);
 		//return PageFactory.initElements(driver, HomePage.class);
 	}
 }
